@@ -83,8 +83,12 @@ class ReplyAppStateRestorationTest {
 
         // Verify that third email is displayed on the details screen
         composeTestRule.onNodeWithTagForStringId(R.string.details_screen).onChildren()
-            .assertAny(hasAnyDescendant(hasText(
-                composeTestRule.activity.getString(LocalEmailsDataProvider.allEmails[2].body)))
+            .assertAny(
+                hasAnyDescendant(
+                    hasText(
+                        composeTestRule.activity.getString(LocalEmailsDataProvider.allEmails[2].body)
+                    )
+                )
             )
 
         // Simulate a config change
@@ -92,8 +96,12 @@ class ReplyAppStateRestorationTest {
 
         // Verify that third email is still displayed on the details screen
         composeTestRule.onNodeWithTagForStringId(R.string.details_screen).onChildren()
-            .assertAny(hasAnyDescendant(hasText(
-                composeTestRule.activity.getString(LocalEmailsDataProvider.allEmails[2].body)))
+            .assertAny(
+                hasAnyDescendant(
+                    hasText(
+                        composeTestRule.activity.getString(LocalEmailsDataProvider.allEmails[2].body)
+                    )
+                )
             )
     }
 }
